@@ -1,0 +1,42 @@
+import { StyleSheet } from "react-native"
+const styles=StyleSheet.create({
+    container:{
+        width:"90%",
+        borderRadius:20,
+        backgroundColor:"#171c24",
+        margin:5,
+        paddingHorizontal:16,
+        paddingVertical:14,
+        flexDirection:"row",
+        alignItems:"center",
+        gap:6,
+        overflow:"hidden",
+    },
+    inputContainer:{
+        flex:1,
+        minWidth:0,
+        height:40,
+        backgroundColor:"#07090d",
+        borderRadius:10,
+        justifyContent:"center",
+        paddingHorizontal:12,
+    },
+    input:{
+        color:"white",
+        fontSize:15,
+    },
+    addBtn:{
+        height:40,
+        paddingHorizontal:14,
+        borderRadius:10,
+        backgroundColor:"#565fde",
+        justifyContent:"center",
+        alignItems:"center",
+    },
+    btnTxt:{
+        color:"white",
+        fontWeight:"bold",
+        fontSize:15,
+    }
+});
+export default styles;
