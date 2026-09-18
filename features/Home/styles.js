@@ -1,11 +1,74 @@
 import {StyleSheet} from 'react-native'
 import { Colors } from '../../shared/theme/Colors'
 const styles=StyleSheet.create({
-    container:{
+    screen:{
         flex:1,
-        justifyContent:'center',
-        alignItems:'center',
         backgroundColor:Colors.background
+    },
+    container:{
+        alignItems:'center',
+        paddingTop:60,
+        paddingBottom:40,
+        gap:12,
+    },
+    header:{
+        width:"90%",
+        marginBottom:4,
+    },
+    dateLabel:{
+        color:Colors.label,
+        fontSize:14,
+    },
+    greeting:{
+        color:Colors.white,
+        fontSize:24,
+        fontWeight:"bold",
+        marginTop:4,
+    },
+    amountRow:{
+        width:"90%",
+        flexDirection:"row",
+        justifyContent:"space-between",
+    },
+    alert:{
+        width:"90%",
+        flexDirection:"row",
+        alignItems:"center",
+        backgroundColor:"#3b221b",
+        borderRadius:15,
+        paddingHorizontal:14,
+        paddingVertical:12,
+        gap:12,
+    },
+    alertIcon:{
+        width:32,
+        height:32,
+        borderRadius:16,
+        backgroundColor:"#f16c3b",
+        justifyContent:"center",
+        alignItems:"center",
+    },
+    alertIconText:{
+        color:Colors.white,
+        fontWeight:"bold",
+    },
+    alertText:{
+        flex:1,
+        gap:2,
+    },
+    alertTitle:{
+        color:Colors.white,
+        fontWeight:"bold",
+        fontSize:14,
+    },
+    alertSubtitle:{
+        color:"#8b93a1",
+        fontSize:13,
+    },
+    alertAmount:{
+        color:"#f16c3b",
+        fontWeight:"bold",
+        fontSize:15,
     }
 });
 export default styles;
