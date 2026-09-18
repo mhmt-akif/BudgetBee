@@ -3,14 +3,21 @@ import { Colors } from '../../shared/theme/Colors';
 const styles=StyleSheet.create({
     container:{
         flex:1,
-        justifyContent:'center',
         alignItems:'center',
+        paddingTop:60,
         backgroundColor:Colors.background
+    },
+    title:{
+        width:"90%",
+        color:Colors.white,
+        fontSize:22,
+        fontWeight:"bold",
+        marginBottom:16,
     },
     sectionTitle:{
         width:"90%",
-        color:Colors.white,
-        fontSize:16,
+        color:Colors.warning,
+        fontSize:14,
         fontWeight:"bold",
         marginTop:12,
         marginBottom:4,
@@ -19,6 +26,26 @@ const styles=StyleSheet.create({
         width:"90%",
         flexDirection:"row",
         flexWrap:"wrap",
+    },
+    settingRow:{
+        width:"90%",
+        flexDirection:"row",
+        justifyContent:"space-between",
+        alignItems:"center",
+        backgroundColor:"#171c24",
+        borderRadius:20,
+        paddingHorizontal:16,
+        paddingVertical:16,
+        marginTop:16,
+    },
+    settingLabel:{
+        color:Colors.white,
+        fontSize:15,
+        fontWeight:"bold",
+    },
+    settingValue:{
+        color:"#5a6472",
+        fontSize:14,
     }
 });
 export default styles;

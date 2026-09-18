@@ -16,8 +16,20 @@ const removeCategory=(type,name)=>{
         [type]:prev[type].filter(c=>c!==name),
     }))
 }
+
+const addCategory=(type,name)=>{
+    setCategories(prev=>{
+        if(prev[type].includes(name)) return prev
+        return {
+            ...prev,
+            [type]:[...prev[type],name],
+        }
+    })
+}
     return(
         <View style={styles.container}>
+            <Text style={styles.title}>Ayarlar</Text>
+
             <Text style={styles.sectionTitle}>Gider Kategorileri</Text>
             <View style={styles.chipRow}>
                 {categories.Gider.map(name => (
@@ -40,7 +52,12 @@ const removeCategory=(type,name)=>{
                 ))}
             </View>
 
-            <AddCategory/>
+            <AddCategory onAdd={addCategory}/>
+
+            <View style={styles.settingRow}>
+                <Text style={styles.settingLabel}>Tema</Text>
+                <Text style={styles.settingValue}>Koyu</Text>
+            </View>
         </View>
     )
 }

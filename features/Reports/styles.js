@@ -4,27 +4,21 @@ import { Colors } from '../../shared/theme/Colors'
 const styles=StyleSheet.create({
     container:{
         flex:1,
+        alignItems:'center',
         paddingTop:60,
         backgroundColor:Colors.background
     },
-    header:{
-        width:"90%",
-        alignSelf:"center",
-        marginBottom:20,
-    },
     title:{
+        width:"90%",
         color:Colors.white,
         fontSize:22,
         fontWeight:"bold",
+        marginBottom:8,
     },
     subtitle:{
-        color:"#5d6673",
-        fontSize:13,
-        marginTop:4,
-    },
-    list:{
-        alignItems:'center',
-        gap:12,
+        width:"90%",
+        color:Colors.label,
+        fontSize:14,
     }
 });
 export default styles;

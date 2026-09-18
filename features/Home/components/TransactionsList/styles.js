@@ -7,33 +7,37 @@ const styles=StyleSheet.create({
     headerContainer:{
         flexDirection:"row",
         justifyContent:"space-between",
+        marginBottom:4,
     },
     content:{
         flexDirection:"row",
-        height:60,
-        backgroundColor:Colors.surfaceAlt,
-        borderRadius:8,
+        alignItems:"center",
+        paddingVertical:12,
+        borderBottomWidth:1,
+        borderBottomColor:"#232830",
+        gap:12,
+    },
+    contentLast:{
+        borderBottomWidth:0,
     },
     image:{
-        flex:0.8,
+        width:40,
+        height:40,
+        borderRadius:20,
         justifyContent:"center",
         alignItems:"center",
         backgroundColor:"#49150f",
-        padding:5,
-        borderRadius:8,
     },
     event:{
-        flex:3,
+        flex:1,
+        minWidth:0,
         justifyContent:"center",
-        paddingLeft:10,
         gap:2,
-
     },
     amount:{
-        flex:1.2, 
+        alignItems:"flex-end",
         justifyContent:"center",
-        alignItems:"center",
-        paddingRight:10,
+        flexShrink:0,
         gap:2,
     }
 });

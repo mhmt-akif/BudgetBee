@@ -2,19 +2,23 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from '../features/Home/Home';
 import { Transactions } from '../features/Transactions/Transactions';
-import { Settings } from '../features/Settings/Settings';   
+import { Reports } from '../features/Reports/Reports';
+import { Settings } from '../features/Settings/Settings';
+import { BottomTabBar } from './BottomTabBar';
+import { Colors } from '../shared/theme/Colors';
 const Tab=createBottomTabNavigator();
 export const BottomNavigator=()=>{
     return(
         <Tab.Navigator
-            screenOptions={({route})=>({
+            screenOptions={{
                 headerShown:false,
-                tabBarActiveTintColor: '#4F46E5',
-                tabBarInactiveTintColor: 'gray',
-            })}
+                sceneStyle:{backgroundColor:Colors.background},
+            }}
+            tabBar={props => <BottomTabBar {...props} />}
         >
             <Tab.Screen name="Home" component={Home} options={{title: 'Ana Sayfa'}} />
-            <Tab.Screen name="Transactions" component={Transactions} options={{title: 'İşlemler'}} />
+            <Tab.Screen name="Transactions" component={Transactions} options={{title: 'Ödemeler'}} />
+            <Tab.Screen name="Reports" component={Reports} options={{title: 'Raporlar'}} />
             <Tab.Screen name="Settings" component={Settings} options={{title: 'Ayarlar'}} />
         </Tab.Navigator>
     )
